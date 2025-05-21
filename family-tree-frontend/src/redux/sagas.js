@@ -3,7 +3,9 @@ import axios from 'axios';
 import * as types from './types';
 import { setMembers } from './actions';
 
-const API = 'http://localhost:5000/api/members';
+//const API = 'http://localhost:5000/api/members';
+const API = 'https://family-tree-manager-main.onrender.com/api/members';
+
 
 function* fetchMembersSaga() {
   const res = yield call(() => axios.get(API));
