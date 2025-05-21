@@ -182,8 +182,7 @@ function App() {
         <Box
           sx={{
             mx: "auto",
-             width: "60%",
-            transform: "translateX(-20%)",
+             width: "100%",
             maxWidth: "900px",
              justifyContent: "center", // Horizontally center
           alignItems: "center", 
