@@ -100,10 +100,10 @@ The backend will serve the frontend build at [http://localhost:5000](http://loca
 
 ## 🔗 API Endpoints
 
-- `GET /api/products` — Get all products
-- `POST /api/products` — Add a new product
-- `PUT /api/products/:id` — Update a product
-- `DELETE /api/products/:id` — Delete a product
+- `GET /api/members` — Get all members
+- `POST /api/members` — Add a new members
+- `PUT /api/members/:id` — Update a members
+- `DELETE /api/members/:id` — Delete a members
 
 ---
 
