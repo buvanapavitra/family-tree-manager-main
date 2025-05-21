@@ -148,7 +148,7 @@ function App() {
           sx={{
             px: 10,
             py: 1.5,
-            transform: "translateX(-30%)",
+            transform: "translateX(-40%)",
             fontSize: "1rem",
             fontWeight: "bold",
             borderRadius: 2,
