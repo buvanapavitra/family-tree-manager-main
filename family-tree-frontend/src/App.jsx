@@ -167,8 +167,9 @@ function App() {
 
       {/* Main Content */}
       <Container
-        maxWidth="lg"
+        maxWidth={false}
         sx={{
+          width: "60%",
           minHeight: "20vh", // Full viewport height
           display: "flex",
           justifyContent: "center", // Horizontally center
