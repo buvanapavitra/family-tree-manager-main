@@ -172,6 +172,7 @@ function App() {
           width: "60%",
           minHeight: "20vh", // Full viewport height
           display: "flex",
+          transform: "translateX(-30%)",
           justifyContent: "center", // Horizontally center
           alignItems: "center", // Vertically center
           flexDirection: "column",
