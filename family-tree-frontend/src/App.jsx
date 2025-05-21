@@ -223,7 +223,7 @@ function App() {
         <DialogContent>
           <Typography>
             <strong>Family Tree Manager</strong> is a app developed using React,
-            Redux, Node.js, and MySQL to manage and visualize family
+            Redux, Node.js, and MongoDB to manage and visualize family
             relationships. You can add, edit, and delete members in a nested
             accordion view. Background Image Credits: pngtree
           </Typography>
