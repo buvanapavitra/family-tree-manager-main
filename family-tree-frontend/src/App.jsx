@@ -143,7 +143,7 @@ function App() {
       <Toolbar />
 
       {/* Add Member Button */}
-      <Box display="flex" sx={{ transform: "translateX(-15px)" }}justifyContent="center" mt={6} mb={3}>
+      <Box display="flex" sx={{ transform: "translateX(-30px)" }}justifyContent="center" mt={6} mb={3}>
         <Button
           sx={{
             px: 10,
