@@ -64,7 +64,7 @@ function App() {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         minHeight: "100vh",
-        width: "100%",
+        width: "90%",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
