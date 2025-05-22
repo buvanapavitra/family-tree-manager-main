@@ -170,7 +170,7 @@ function App() {
       <Container
         maxWidth={false}
         sx={{
-          width: "60%",
+          width: "100%",
           minHeight: "20vh", // Full viewport height
           display: "flex",
           transform: "translateX(-30%)",
