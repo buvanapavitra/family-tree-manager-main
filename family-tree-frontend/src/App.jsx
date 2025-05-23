@@ -66,7 +66,7 @@ function App() {
               </Typography>
             </Box>
             <Typography variant="subtitle1" className="family-subtitle">
-              Connect Generations, One Click at a Time..
+              Connect Generations, One Click at a Time.
             </Typography>
           </Box>
           <Box className="about-box">
