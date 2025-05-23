@@ -15,12 +15,8 @@ import {
   Toolbar,
   Typography,
   Button,
-  IconButton,
   Box,
   Container,
-} from "@mui/material";
-
-import {
   Dialog,
   DialogTitle,
   DialogContent,
@@ -28,8 +24,9 @@ import {
 } from "@mui/material";
 
 import AddIcon from "@mui/icons-material/Add";
-import FamilyRestroomIcon from "@mui/icons-material/FamilyRestroom";
-import backgroundImage from "./assets/treeimage.jpg";
+import Diversity1Icon from '@mui/icons-material/Diversity1';
+
+import "./App.css";
 
 function App() {
   const dispatch = useDispatch();
@@ -56,81 +53,28 @@ function App() {
   };
 
   return (
-    <Box
-      sx={{
-        backgroundImage: `url(${backgroundImage})`,
-        backgroundAttachment: "fixed",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        minHeight: "100vh",
-        width: "90%",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "column",
-        px: 34,
-        textAlign: "center",
-      }}
-    >
+    <Box className="app-background">
       {/* Top Navigation Bar */}
-      <AppBar position="fixed" sx={{ backgroundColor: "#5C4033", py: 1 }}>
-        <Toolbar
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            width: "100%",
-          }}
-        >
-          {/* Empty Box to balance layout */}
-          <Box width="80px" />
-
-          {/* Centered title and icon */}
-          <Box textAlign="center">
-            <Box
-              display="flex"
-              justifyContent="center"
-              alignItems="center"
-              mb={0.5}
-            >
-              <FamilyRestroomIcon
-                fontSize="large"
-                sx={{ mr: 1, color: "#fff" }}
-              />
-              <Typography
-                variant="h5"
-                fontWeight="bold"
-                sx={{
-                  fontSize: { xs: "1.8rem", sm: "2.4rem" },
-                  letterSpacing: "0.5px",
-                  color: "#FFFFFF",
-                }}
-                noWrap
-              >
+      <AppBar position="fixed" className="app-bar">
+        <Toolbar className="toolbar">
+          <Box className="empty-box" />
+          <Box className="title-box">
+            <Box className="title-icon">
+              <Diversity1Icon fontSize="large" sx={{ color: "#fff", marginRight: "8px" }} />
+              <Typography variant="h5" className="family-title" noWrap>
                 Family Tree Manager
               </Typography>
             </Box>
-            <Typography
-              variant="subtitle1"
-              sx={{
-                fontSize: { xs: "0.85rem", sm: "1rem" },
-                fontWeight: 400,
-                color: "rgba(255, 255, 255, 0.85)",
-                fontStyle: "italic",
-              }}
-            >
-              Connect Generations, One Click at a Time.
+            <Typography variant="subtitle1" className="family-subtitle">
+              Connect Generations, One Click at a Time..
             </Typography>
           </Box>
-
-          {/* Right Home button */}
-          <Box width="100px" display="flex" justifyContent="space-between">
+          <Box className="about-box">
             <Button
               variant="outlined"
               color="inherit"
               size="small"
-              sx={{ textTransform: "none" }}
+              className="about-button"
               onClick={() => setAboutOpen(true)}
             >
               About
@@ -143,19 +87,11 @@ function App() {
       <Toolbar />
 
       {/* Add Member Button */}
-      <Box display="flex" sx={{ transform: "translateX(-30px)" }}justifyContent="center" mt={6} mb={3}>
+      <Box className="add-member-button-box">
         <Button
-          sx={{
-            px: 10,
-            py: 1.5,
-            transform: "translateX(-40%)",
-            fontSize: "1rem",
-            fontWeight: "bold",
-            borderRadius: 2,
-            boxShadow: 3,
-          }}
           variant="contained"
           color="success"
+          className="add-member-button"
           startIcon={<AddIcon />}
           onClick={() => {
             setEditData(null);
@@ -167,31 +103,8 @@ function App() {
       </Box>
 
       {/* Main Content */}
-      <Container
-        maxWidth={false}
-        sx={{
-          width: "100%",
-          minHeight: "20vh", // Full viewport height
-          display: "flex",
-          transform: "translateX(-30%)",
-          justifyContent: "center", // Horizontally center
-          alignItems: "center", // Vertically center
-          flexDirection: "column",
-        }}
-      >
-        <Box
-          sx={{
-            mx: "auto",
-             width: "100%",
-            maxWidth: "900px",
-             justifyContent: "center", // Horizontally center
-          alignItems: "center", 
-            gap: 2,
-            backgroundColor: "rgba(255, 255, 255, 0.9)", // translucent white bg for readability
-            borderRadius: 2,
-            p: 2,
-          }}
-        >
+      <Container maxWidth="lg" className="content-container">
+        <Box className="accordion-wrapper">
           <Accordion
             members={members}
             onEdit={handleEdit}
@@ -220,12 +133,12 @@ function App() {
         member={deleteMemberData}
       />
 
-      {/* About  */}
+      {/* About Dialog */}
       <Dialog open={aboutOpen} onClose={() => setAboutOpen(false)}>
         <DialogTitle>About</DialogTitle>
         <DialogContent>
           <Typography>
-            <strong>Family Tree Manager</strong> is a app developed using React,
+            <strong>Family Tree Manager</strong> is an app developed using React,
             Redux, Node.js, and MongoDB to manage and visualize family
             relationships. You can add, edit, and delete members in a nested
             accordion view. Background Image Credits: pngtree
