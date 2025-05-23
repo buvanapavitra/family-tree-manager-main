@@ -5,7 +5,7 @@ This is a full-stack web application for managing a family tree. Users can add, 
 ## 🌐 Live Demo
 
 **Application hosted on Render:**  
-[[https://mern-8c7f.onrender.com/](https://mern-8c7f.onrender.com/)](https://family-tree-manager-main.onrender.com/)
+(https://family-tree-manager-main.onrender.com/)
 
 ## Features
 
